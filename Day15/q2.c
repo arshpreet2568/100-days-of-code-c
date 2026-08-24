@@ -27,7 +27,7 @@ int main() {
         n /= 10;
     }
 
-    printf("Reversed number = %d\n", reversed);
+    printf("Reversed number is  = %d\n", reversed);
 
     return 0;
 }

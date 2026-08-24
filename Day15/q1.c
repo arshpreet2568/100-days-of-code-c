@@ -27,7 +27,7 @@ int main() {
         factorial *= i;
     }
 
-    printf("Factorial of %d = %.0f\n", n, factorial);
+    printf("Factorial of %d is %.0f\n", n, factorial);
 
     return 0;
 }
