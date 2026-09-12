@@ -34,5 +34,5 @@ int binarySearch(int arr[], int size, int target) {
         }
     }
 
-    return -1; // Target not found
+    return 0; // Target not found
 }
