@@ -11,11 +11,40 @@ Output 1:
 
 */
 #include <stdio.h>
-void insertInSortedArray(int arr[], int *size, int element) {
-    int i;
-    for (i = *size - 1; (i >= 0 && arr[i] > element); i--) {
-        arr[i + 1] = arr[i]; // Shift elements to the right
+int main() {
+    int n, i, element;
+    scanf("%d", &n);
+    int arr[n + 1]; // Create an array with one extra space for the new element
+
+    // Read the sorted array elements
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
-    arr[i + 1] = element; // Insert the new element
-    (*size)++; // Increase the size of the array
+
+    // Read the element to be inserted
+    scanf("%d", &element);
+
+    // Find the appropriate position to insert the new element
+    int pos = n; // Default position is at the end
+    for (i = 0; i < n; i++) {
+        if (arr[i] > element) {
+            pos = i;
+            break;
+        }
+    }
+
+    // Shift elements to the right to make space for the new element
+    for (i = n; i > pos; i--) {
+        arr[i] = arr[i - 1];
+    }
+
+    // Insert the new element at the found position
+    arr[pos] = element;
+
+    // Print the updated array
+    for (i = 0; i <= n; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
 }
