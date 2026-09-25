@@ -38,9 +38,11 @@ int main() {
         if (arr[mid] == target) {
             foundIndex = mid;
             break;
-        } else if (arr[mid] < target) {
+        } 
+        else if (arr[mid] < target) {
             left = mid + 1;
-        } else {
+        } 
+        else {
             right = mid - 1;
         }
     }
