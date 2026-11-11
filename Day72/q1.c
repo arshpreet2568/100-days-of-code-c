@@ -11,6 +11,7 @@ Age: 23
 */
 #include <stdio.h>
 int main() {
+        
     FILE *file = fopen("info.txt", "r"); // Open the file in read mode
     if (file == NULL) {
         printf("Error opening file!\n");
